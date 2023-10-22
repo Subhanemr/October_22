@@ -45,6 +45,7 @@ namespace _22_10_23
             Console.WriteLine("UnSorted List:");
             ShowList(prLanguages);
             SortedList(prLanguages);
+            //prLanguages.Sort(CompareByYear); //Bu ikinci Sortlamagin ikinci usuludur
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("Sorted List:");
             ShowList(prLanguages);
@@ -179,6 +180,10 @@ namespace _22_10_23
         #region Task 1 Metods
 
         //Task 1 Metods
+        public static int CompareByYear(ProgramLanguage x, ProgramLanguage y)
+        {
+            return x.Year.CompareTo(y.Year);
+        }
         public static void ShowList(List<ProgramLanguage> prLanguages)
         {
             foreach (var prLanguage in prLanguages)
